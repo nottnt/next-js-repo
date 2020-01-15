@@ -5,11 +5,28 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true yarn build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^9.1.7",
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.26.7",
+    "axios": "^0.19.1",
     "next": "9.1.7",
+    "next-compose-plugins": "^2.2.0",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-content-loader": "^4.3.4",
+    "react-dom": "16.12.0",
+    "styled-components": "^5.0.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/nottnt/next-js-repo.git",
+  "author": "notsoilfish <tanatat@soilfish.co>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "cross-env": "^6.0.3"
   }
 }

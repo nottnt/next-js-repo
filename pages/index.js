@@ -2,8 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
 
-const Home = () => (
+const Home = ({ test }) => (
   <div>
+    {console.log(test)}
     <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
@@ -31,7 +32,7 @@ const Home = () => (
           className="card"
         >
           <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
+          <p>Find other example boilerplates on the Next.js GitHub.  {test}</p>
         </a>
       </div>
     </div>
@@ -84,5 +85,11 @@ const Home = () => (
     `}</style>
   </div>
 )
+
+Home.getInitialProps = () => {
+  const test = 'getInitialProps'
+
+  return { test };
+}
 
 export default Home
